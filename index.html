@@ -1,17 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Test Website</title>
+		<title>Website Tailwind</title>
+		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
-	<body>
-		<h1>Hello World!</h1>
-		<p>
-			Ini adalah sebuah paragraf Lorem ipsum dolor sit amet consectetur
-			adipisicing elit. Officia labore, earum dolorem at vitae obcaecati ad
-			voluptates ex quaerat voluptatibus, totam quasi ipsa, amet qui. Deleniti
-			architecto mollitia sunt perspiciatis?
-		</p>
+	<body class="bg-gray-100 text-gray-800 font-sans">
+		<!-- Header -->
+		<header class="bg-blue-600 text-white text-center py-6">
+			<h1 class="text-3xl font-bold">Selamat Datang</h1>
+			<p class="text-lg italic">Belajar HTML & Tailwind CSS</p>
+		</header>
+
+		<!-- Navigasi -->
+		<nav class="bg-white shadow p-4">
+			<ul class="flex space-x-4 justify-center text-blue-600 font-semibold">
+				<li><a href="#tentang" class="hover:underline">Tentang</a></li>
+				<li><a href="#artikel" class="hover:underline">Artikel</a></li>
+				<li><a href="#kontak" class="hover:underline">Kontak</a></li>
+			</ul>
+		</nav>
+
+		<!-- Main Content -->
+		<main class="max-w-4xl mx-auto p-4 space-y-8">
+			<!-- Tentang -->
+			<section id="tentang" class="bg-white rounded shadow p-6">
+				<h2 class="text-2xl font-bold mb-4 text-blue-600">Tentang Saya</h2>
+				<p>
+					Saya sedang belajar <strong>HTML</strong> dan
+					<strong>Tailwind CSS</strong>.
+				</p>
+				<img src="assets/laptop.png" alt="Contoh Gambar" class="mt-4 rounded" />
+			</section>
+
+			<!-- Artikel -->
+			<section id="artikel" class="bg-white rounded shadow p-6">
+				<h2 class="text-2xl font-bold text-blue-600 mb-4">Artikel</h2>
+				<article class="mb-4">
+					<h3 class="text-xl font-semibold">Belajar Tailwind</h3>
+					<p class="mt-2">
+						Tailwind CSS adalah framework CSS berbasis utility class.
+					</p>
+					<pre
+						class="bg-gray-100 p-2 rounded mt-2"
+					><code>&lt;div class="text-xl text-blue-600"&gt;Contoh&lt;/div&gt;</code></pre>
+				</article>
+
+				<!-- Tombol interaktif JS -->
+				<div class="flex gap-4 mt-4">
+					<button
+						onclick="gantiWarna()"
+						class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
+					>
+						Ganti Warna Artikel
+					</button>
+					<button
+						onclick="toggleArtikel()"
+						class="bg-gray-600 hover:bg-gray-800 text-white py-2 px-4 rounded"
+					>
+						Tampilkan/Sembunyikan Artikel
+					</button>
+				</div>
+			</section>
+
+			<!-- Kontak -->
+			<section id="kontak" class="bg-white rounded shadow p-6">
+				<h2 class="text-2xl font-bold text-blue-600 mb-4">Hubungi Saya</h2>
+				<form class="space-y-4">
+					<div>
+						<label for="nama" class="block mb-1">Nama</label>
+						<input
+							type="text"
+							id="nama"
+							class="w-full border border-gray-300 p-2 rounded"
+						/>
+					</div>
+					<div>
+						<label for="email" class="block mb-1">Email</label>
+						<input
+							type="email"
+							id="email"
+							class="w-full border border-gray-300 p-2 rounded"
+						/>
+					</div>
+					<div>
+						<label for="pesan" class="block mb-1">Pesan</label>
+						<textarea
+							id="pesan"
+							class="w-full border border-gray-300 p-2 rounded"
+						></textarea>
+					</div>
+					<button
+						type="submit"
+						class="bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded"
+					>
+						Kirim
+					</button>
+				</form>
+			</section>
+		</main>
+
+		<!-- Footer -->
+		<footer class="bg-gray-800 text-white text-center p-4 mt-8">
+			&copy; 2025 Website Saya. Dibuat dengan ❤.
+		</footer>
+
+		<!-- Script interaktif -->
+		<script src="script.js"></script>
 	</body>
 </html>
